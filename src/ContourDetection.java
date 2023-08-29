@@ -38,11 +38,6 @@ public class ContourDetection {
                 return originalCroppedImagePath;
             }
 
-            // Convert the image to grayscale
-            Mat gray = new Mat();
-            Imgproc.cvtColor(image, gray, Imgproc.COLOR_BGR2GRAY);
-
-            // Apply Canny edge detection
             Mat edges = new Mat();
             Imgproc.Canny(gray, edges, 30, 200);
 
